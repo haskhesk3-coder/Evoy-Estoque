@@ -1,0 +1,218 @@
+PROMPT MESTRE — EVOY
+
+Crie o site oficial completo do EvoY, um projeto tecnológico de gestão inteligente de estoque desenvolvido para MEIs e pequenos negócios.
+
+CONTEXTO:
+O EvoY surgiu para solucionar problemas de controle de estoque baseado em estimativas/“achismo”. A proposta utiliza software + tecnologia RFID para identificar produtos e auxiliar no registro e acompanhamento de movimentações. O projeto possui pesquisa, desenvolvimento do software e estudo de caso em um salão, onde o estoque era acompanhado principalmente de forma visual/manual.
+
+IMPORTANTE: não invente resultados, porcentagens, clientes, usuários, empresas, funcionalidades ou dados científicos. Quando algo ainda estiver em teste, deixe isso claro.
+
+OBJETIVO:
+Não faça apenas uma landing page. Crie uma plataforma institucional profissional que apresente o projeto, a pesquisa, a tecnologia e permita baixar o EvoY para Windows.
+
+PÁGINAS:
+• Home
+• O Projeto
+• Tecnologia RFID
+• Metodologia
+• Downloads
+• Documentação
+• Equipe
+• FAQ
+• Contato
+• Painel Admin
+
+HOME:
+Hero moderno com:
+“Gestão inteligente de estoque para pequenos negócios.”
+Texto curto explicando o EvoY.
+Botões “Conheça o EvoY” e “Baixar para Windows”.
+Criar mockup/representação visual do software, RFID e fluxo de dados.
+
+SEÇÕES:
+
+1. O problema
+   Explicar dificuldades de pequenos negócios com controle manual e estimativas de estoque.
+
+2. A solução
+   Explicar o EvoY e como software + RFID podem ajudar na identificação e acompanhamento dos produtos.
+
+3. Como funciona
+   Mostrar visualmente:
+   Produto → RFID → Leitura → EvoY → Registro → Estoque.
+
+4. RFID
+   Explicar de forma simples o que é Radio Frequency Identification e seu papel no projeto.
+
+5. Estudo de caso
+   Apresentar o caso do salão utilizado na pesquisa, mostrando situação anterior, desenvolvimento/testes e situação após a implementação, sem inventar resultados.
+
+6. Metodologia
+   Mostrar:
+   Problema → Pesquisa → Estudo RFID → Desenvolvimento → Integração → Testes → Ajustes → Análise.
+
+7. Software
+   Mostrar screenshots/mockups reais do EvoY quando disponíveis.
+
+8. Limitações
+   Mostrar honestamente que ainda existem necessidades de testes, validações, diferentes condições de leitura e aplicação em outros estabelecimentos.
+
+9. Próximos passos
+   Mostrar evolução futura do projeto sem afirmar que algo já existe.
+
+DOWNLOAD:
+Criar uma central profissional de downloads.
+
+Mostrar:
+EvoY para Windows
+Versão atual
+Arquitetura
+Tamanho
+Data
+Changelog
+SHA-256
+
+Botão “BAIXAR EVOY PARA WINDOWS”.
+
+Criar histórico de versões.
+
+O download NÃO deve ficar preso no código do frontend. Criar backend para cadastrar versões e arquivos.
+
+BANCO:
+Criar tabelas para:
+users
+releases
+team_members
+documents
+faq
+project_updates
+
+RELEASES deve possuir:
+id, versão, plataforma, arquitetura, arquivo, URL, tamanho, checksum, changelog, data e is_latest.
+
+API:
+GET /api/releases
+GET /api/releases/latest
+GET /api/releases/:version
+GET /api/team
+GET /api/documents
+GET /api/faq
+GET /api/updates
+
+Admin:
+POST/PUT/DELETE para releases, equipe, documentos e atualizações.
+
+PAINEL ADMIN:
+Login seguro.
+Permitir:
+• cadastrar nova versão;
+• definir versão atual;
+• adicionar arquivo;
+• alterar changelog;
+• adicionar documentos;
+• editar equipe;
+• editar FAQ;
+• publicar atualizações.
+
+Nunca armazenar senha em texto puro.
+
+DESIGN:
+Quero aparência de produto tecnológico real, não de trabalho escolar ou template genérico.
+
+Visual moderno, limpo e profissional:
+• bastante espaço negativo;
+• cards;
+• gradientes discretos;
+• elementos de RFID/dados;
+• tipografia moderna;
+• microinterações;
+• animações suaves;
+• mockups;
+• timeline;
+• ícones minimalistas.
+
+Não copiar identidade visual de Microsoft, Apple, Google, SAP etc.
+
+RESPONSIVIDADE:
+Mobile-first e perfeito em celular, tablet, notebook e desktop.
+
+ACESSIBILIDADE:
+HTML semântico, teclado, contraste, foco visível, alt text, suporte a leitores de tela e redução de movimento.
+
+PERFORMANCE:
+Site leve e rápido. Usar lazy loading, imagens otimizadas, cache, divisão de código e evitar dependências desnecessárias.
+
+SEO:
+Criar title, description, Open Graph, favicon, sitemap, robots.txt e estrutura correta de headings.
+
+Título:
+“EvoY — Gestão Inteligente de Estoque”
+
+SEGURANÇA:
+Implementar validação, sanitização, proteção contra XSS/SQL Injection, rate limiting, autenticação, autorização, CORS correto e variáveis secretas em .env.
+
+CONTATO:
+Formulário com nome, email, assunto e mensagem conectado ao backend e protegido contra spam.
+
+DOCUMENTAÇÃO:
+Criar:
+Introdução
+Instalação
+Como usar
+RFID
+FAQ
+Histórico de versões
+
+DESIGN SYSTEM:
+Criar componentes reutilizáveis:
+Navbar, Footer, Button, Card, Modal, Badge, Timeline, DownloadCard, ReleaseCard, TeamCard, FAQ, Gallery, Input, Loading, ErrorState e Toast.
+
+ARQUITETURA:
+Separar:
+frontend
+backend
+database
+storage
+docs
+assets
+
+Código modular, limpo e fácil de manter.
+
+TECNOLOGIA:
+Escolha stack moderna, gratuita/open-source quando possível, leve e adequada para hospedagem gratuita. Não adicionar tecnologias apenas para parecer sofisticado.
+
+PREPARAÇÃO FUTURA:
+A arquitetura deve permitir futuramente:
+Linux, macOS, Android, contas de usuários, sincronização em nuvem, dashboard, integração com leitores RFID, estatísticas e API pública.
+
+Não implemente essas funções agora se elas ainda não existirem. Apenas deixe a arquitetura preparada.
+
+404:
+Criar página personalizada para páginas inexistentes.
+
+README:
+Incluir instalação, configuração, banco, variáveis .env, desenvolvimento, build, deploy, administração, downloads, segurança e licença.
+
+ANTES DE FINALIZAR:
+Analise a arquitetura, crie o design system, banco e API; depois desenvolva frontend e backend, conecte tudo e teste:
+• páginas;
+• navegação;
+• mobile;
+• desktop;
+• API;
+• banco;
+• login;
+• painel;
+• formulário;
+• downloads;
+• histórico de versões;
+• erros;
+• build de produção.
+
+RESULTADO FINAL:
+Quero que o site pareça o portal oficial de um produto tecnológico/científico real.
+
+O visitante deve conseguir:
+ENTENDER O PROBLEMA → CONHECER O EVOY → ENTENDER RFID → CONHECER A PESQUISA → VER O SOFTWARE → LER A DOCUMENTAÇÃO → BAIXAR O EVOY.
+
+Priorize simplicidade, segurança, velocidade, estética profissional e facilidade de manutenção.
